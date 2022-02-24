@@ -13,7 +13,7 @@ amqp.connect('amqp://localhost', function(error0, connection) {
     const msg = 'Hello world';
 
     channel.assertQueue(queue, {
-      durable: false
+      durable: true
     });
 
     channel.sendToQueue(queue, Buffer.from(msg));
